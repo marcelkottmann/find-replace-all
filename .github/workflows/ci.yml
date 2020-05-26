@@ -8,4 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Build
-        run: ./commands-available.sh
+        run: |
+          node demo.js
+          echo "exitcode => $?"
